@@ -38,7 +38,6 @@ $result = $conn->query($sql);
 	background-color: red;
 	color: white;
 	padding: 5px;"><?php echo $c; ?></span>
-		<a href="logout.php">(logout)</a>
 	</section>
 
 	<div class="sidenav" id="sidenav">
@@ -65,6 +64,12 @@ $result = $conn->query($sql);
 			<li class="nav-item">
 				<a class="nav-link u" href="report.php">Report</a>
 			</li>
+
+
+			<li class="nav-item">
+				<a class="nav-link u" href="logout.php">Logout</a>
+			</li>
+
 		</ul>
 	</div>
 	<?php

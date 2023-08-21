@@ -1,3 +1,3 @@
-<footer class="bg-dark text-white text-center py-2">
-    &copy; 2023 Your Company Name. All rights reserved.
-  </footer>
+<footer class="bg-white text-black text-center py-2">
+  &copy; 2023 All rights reserved.
+</footer>

@@ -36,40 +36,29 @@ if (isset($_POST['add_to_cart'])) {
 
 ?>
 
+<style>
 
+</style>
 
 <!--banner start-->
 <div class="banner">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-
         <div class="banner-text">
-          <p class="bt1">Welcome To</p>
-          <p class="bt2"><span class="bt3">Fashion</span>Store</p>
-          <p class="bt4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et mi <br>vulputate gen
-            vehicula maximus sagittis rhoncus tortor. Class </p>
-
+          <p class="bt1">Discover The Latest</p>
+          <p class="bt2"><span class="bt3">Fashion Trends</span></p>
+          <p>Shop now for stylish clothing, accessories, and more!</p>
         </div>
-
-
       </div>
-
       <div class="col-md-6">
-
         <img src="" class="img-fluid">
-
       </div>
-
     </div>
   </div>
 </div>
-
 <!--banner end-->
-
-
 <!---top sell start---->
-
 <section>
   <div class="container">
     <div class="topsell-head">
@@ -78,12 +67,8 @@ if (isset($_POST['add_to_cart'])) {
           <img src="img/mark.png">
           <h4>All Products</h4>
           <p>A passage of Lorem Ipsum you need here</p>
-
         </div>
-
-
       </div>
-
     </div>
   </div>
   <div class="container">
@@ -116,109 +101,14 @@ if (isset($_POST['add_to_cart'])) {
 
             </div>
           </form>
-        <?php
+          <?php
         }
       } else
         echo "0 results";
       ?>
-
-
     </div>
   </div>
 </section>
-
-
-<!---top sell end---->
-
-
-<!---logo start--->
-
-<div class="logo5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-1">
-
-      </div>
-      <div class="col-md-2 text-center">
-        <img src="img/logo1.png">
-      </div>
-      <div class="col-md-2 text-center">
-        <img src="img/logo2.png">
-      </div>
-      <div class="col-md-2 text-center">
-        <img src="img/logo3.png">
-      </div>
-      <div class="col-md-2 text-center">
-        <img src="img/logo4.png">
-      </div>
-      <div class="col-md-2 text-center">
-        <img src="img/logo5.png">
-      </div>
-      <div class="col-md-1">
-
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<!---logo end--->
-
-<!---welcome start--->
-
-<div class="welcome">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-lg-6 col-sm-12">
-        <span class="welcometitle">Welcome to Lawyers Pro</span>
-        <img src="img/titleful.png">
-        <img src="img/titleline.png" class="titleline">
-
-        <div class="row" id="wel1">
-          <div class="col-md-2 col-lg-2 col-2">
-            <img src="img/w1.png" class="w" class="img-fluid">
-          </div>
-          <div class="col-md-10  col-lg-10 col-10">
-            <h6 class="wh">24x7 online free support</h6>
-            <p class="wp">There are many variations of passages Lorem Ipsum available<br>
-              but they are many variations </p>
-          </div>
-        </div>
-
-        <div class="row" id="wel2">
-          <div class="col-md-2 col-lg-2 col-2">
-            <img src="img/w1.png" class="w" class="img-fluid">
-          </div>
-          <div class="col-md-10  col-lg-10 col-10">
-            <h6 class="wh">24x7 online free support</h6>
-            <p class="wp">There are many variations of passages Lorem Ipsum available<br>
-              but they are many variations </p>
-          </div>
-        </div>
-
-        <div class="row" id="wel2">
-          <div class="col-md-2 col-lg-2 col-2">
-            <img src="img/w1.png" class="w" class="img-fluid">
-          </div>
-          <div class="col-md-10  col-lg-10 col-10">
-            <h6 class="wh">24x7 online free support</h6>
-            <p class="wp">There are many variations of passages Lorem Ipsum available<br>
-              but they are many variations </p>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-md-12 col-lg-6 col-sm-12">
-        <img src="img/comment.png" class="img-fluid">
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<!---welcome end--->
 
 
 

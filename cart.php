@@ -4,8 +4,6 @@ ini_set("display_errors", 1);
 
 include 'header.php';
 include 'lib/connection.php';
-
-
 if (isset($_SESSION['auth'])) {
   if ($_SESSION['auth'] != 1) {
     header("location:login.php");
@@ -41,13 +39,7 @@ if (isset($_POST['order_btn'])) {
               $update_id = $row['id'];
               $t = $row['quantity'] - $product_item['quantity'];
               $update_quantity_query = mysqli_query($conn, "UPDATE `product` SET quantity = '$t' WHERE id = '$update_id'");
-
-
               $flag = 1;
-
-
-
-
             } else {
               echo "out of stock " . $row['name'] . " Quantity:" . $row['quantity'];
             }
