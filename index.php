@@ -60,17 +60,20 @@ if (isset($_POST['add_to_cart'])) {
 <!--banner end-->
 <!---top sell start---->
 <section>
+
   <div class="container">
     <div class="topsell-head">
       <div class="row">
         <div class="col-md-12 text-center">
           <img src="img/mark.png">
           <h4>All Products</h4>
-          <p>A passage of Lorem Ipsum you need here</p>
+          <p>Welcome to our amazing collection of products that cater to your every need. From innovative gadgets to
+            stylish accessories, we have it all!</p>
         </div>
       </div>
     </div>
   </div>
+
   <div class="container">
     <div class="row">
       <?php

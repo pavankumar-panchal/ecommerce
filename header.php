@@ -130,7 +130,7 @@
           <a href="login.php " class="mx-3">Login</a>
           <a href="register.php" class="mx-3">Signup</a>
           <a href="./admin/login.php" class="mx-3"> Admin login</a>
-          
+
           <?php
         }
         ?>
