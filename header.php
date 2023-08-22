@@ -96,9 +96,7 @@
           <li class="nav-item">
             <a class="nav-link" href="Clothing.php"> Clothing</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Trends.php">Trends</a>
-          </li>
+
         </ul>
         <form class="form-inline search-form" action="search(1).php" method="post">
           <input class="form-control mx-3" type="search" placeholder="Search" aria-label="Search" name="name">
@@ -130,7 +128,9 @@
         } else {
           ?>
           <a href="login.php " class="mx-3">Login</a>
-          <a href="Register.php" class="mx-3">Signup</a>
+          <a href="register.php" class="mx-3">Signup</a>
+          <a href="./admin/login.php" class="mx-3"> Admin login</a>
+
           <?php
         }
         ?>

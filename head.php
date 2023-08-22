@@ -74,12 +74,12 @@
         </div>
     </header>
     <?php
-  SESSION_START();
-  include "lib/connection.php";
-  $id = $_SESSION['userid'];
-  $sql = "SELECT * FROM cart where userid='$id'";
-  $result = $conn->query($sql);
-  ?>
+    SESSION_START();
+    include "lib/connection.php";
+    $id = $_SESSION['userid'];
+    $sql = "SELECT * FROM cart where userid='$id'";
+    $result = $conn->query($sql);
+    ?>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">

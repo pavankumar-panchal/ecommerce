@@ -36,189 +36,104 @@ if (isset($_POST['add_to_cart'])) {
 
 ?>
 
+<style>
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    height: 100%;
+  }
 
+  .product-img {
+    max-width: 100%;
+    height: auto;
+    flex: 1;
+  }
+</style>
 
 <!--banner start-->
 <div class="banner">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-
         <div class="banner-text">
-          <p class="bt1">Welcome To</p>
-          <p class="bt2"><span class="bt3">Fashion</span>Store</p>
-          <p class="bt4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et mi <br>vulputate gen
-            vehicula maximus sagittis rhoncus tortor. Class </p>
-
+          <p class="bt1">Discover The Latest</p>
+          <p class="bt2"><span class="bt3">Fashion Trends</span></p>
+          <p>Shop now for stylish clothing, accessories, and more!</p>
         </div>
-
-
       </div>
-
       <div class="col-md-6">
-
         <img src="" class="img-fluid">
-
       </div>
-
     </div>
   </div>
 </div>
-
 <!--banner end-->
-
-
 <!---top sell start---->
-
 <section>
+
   <div class="container">
     <div class="topsell-head">
       <div class="row">
         <div class="col-md-12 text-center">
           <img src="img/mark.png">
           <h4>All Products</h4>
-          <p>A passage of Lorem Ipsum you need here</p>
-
+          <p>Welcome to our amazing collection of products that cater to your every need. From innovative gadgets to
+            stylish accessories, we have it all!</p>
         </div>
-
-
       </div>
-
     </div>
   </div>
+
+
+
   <div class="container">
     <div class="row">
       <?php
       if (mysqli_num_rows($result) > 0) {
-        // output data of each row
         while ($row = mysqli_fetch_assoc($result)) {
           ?>
-          <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-            <div class="col-md-3 col-sm-6 col-6">
-              <div>
-                <img src="admin/product_img/<?php echo $row['imgname']; ?>">
-              </div>
-              <div>
-                <div>
-                  <h6>
-                    <?php echo $row["name"] ?>
-                  </h6>
-                  <span>
-                    <?php echo $row["Price"] ?>
-                  </span>
-                  <input type="hidden" name="user_id" value="<?php echo $_SESSION['userid']; ?>">
-                  <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>">
-                  <input type="hidden" name="product_name" value="<?php echo $row['name']; ?>">
-                  <input type="hidden" name="product_price" value="<?php echo $row['Price']; ?>">
-                </div>
-                <input type="submit" class="btn btn btn-primary" value="add to cart" name="add_to_cart">
-              </div>
-
-            </div>
-          </form>
-        <?php
+          <div class="col-md-3 col-sm-6 col-6">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="product-card">
+              <img class="product-img" src="admin/product_img/<?php echo $row['imgname']; ?>" alt="Product Image">
+              <h6>
+                <?php echo $row["name"]; ?>
+              </h6>
+              <span>
+                <?php echo $row["Price"]; ?>
+              </span>
+              <input type="hidden" name="user_id" value="<?php echo $_SESSION['userid']; ?>">
+              <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>">
+              <input type="hidden" name="product_name" value="<?php echo $row['name']; ?>">
+              <input type="hidden" name="product_price" value="<?php echo $row['Price']; ?>">
+              <input type="submit" class="btn btn-primary mt-2" value="Add to Cart" name="add_to_cart">
+            </form>
+          </div>
+          <?php
         }
-      } else
+      } else {
         echo "0 results";
+      }
       ?>
-
-
     </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </section>
-
-
-<!---top sell end---->
-
-
-<!---logo start--->
-
-<div class="logo5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-1">
-
-      </div>
-      <div class="col-md-2 text-center">
-        <img src="img/logo1.png">
-      </div>
-      <div class="col-md-2 text-center">
-        <img src="img/logo2.png">
-      </div>
-      <div class="col-md-2 text-center">
-        <img src="img/logo3.png">
-      </div>
-      <div class="col-md-2 text-center">
-        <img src="img/logo4.png">
-      </div>
-      <div class="col-md-2 text-center">
-        <img src="img/logo5.png">
-      </div>
-      <div class="col-md-1">
-
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<!---logo end--->
-
-<!---welcome start--->
-
-<div class="welcome">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-lg-6 col-sm-12">
-        <span class="welcometitle">Welcome to Lawyers Pro</span>
-        <img src="img/titleful.png">
-        <img src="img/titleline.png" class="titleline">
-
-        <div class="row" id="wel1">
-          <div class="col-md-2 col-lg-2 col-2">
-            <img src="img/w1.png" class="w" class="img-fluid">
-          </div>
-          <div class="col-md-10  col-lg-10 col-10">
-            <h6 class="wh">24x7 online free support</h6>
-            <p class="wp">There are many variations of passages Lorem Ipsum available<br>
-              but they are many variations </p>
-          </div>
-        </div>
-
-        <div class="row" id="wel2">
-          <div class="col-md-2 col-lg-2 col-2">
-            <img src="img/w1.png" class="w" class="img-fluid">
-          </div>
-          <div class="col-md-10  col-lg-10 col-10">
-            <h6 class="wh">24x7 online free support</h6>
-            <p class="wp">There are many variations of passages Lorem Ipsum available<br>
-              but they are many variations </p>
-          </div>
-        </div>
-
-        <div class="row" id="wel2">
-          <div class="col-md-2 col-lg-2 col-2">
-            <img src="img/w1.png" class="w" class="img-fluid">
-          </div>
-          <div class="col-md-10  col-lg-10 col-10">
-            <h6 class="wh">24x7 online free support</h6>
-            <p class="wp">There are many variations of passages Lorem Ipsum available<br>
-              but they are many variations </p>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-md-12 col-lg-6 col-sm-12">
-        <img src="img/comment.png" class="img-fluid">
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<!---welcome end--->
 
 
 

@@ -41,7 +41,6 @@ $result = $conn -> query ($sql);
       <th scope="col">Name</th>
       <th scope="col">Address</th>
       <th scope="col">Phone</th>
-      <th scope="col">Send Money Number</th>
       <th scope="col">Txid</th>
       <th scope="col">Total Product</th>
       <th scope="col">Total Price</th>
@@ -64,7 +63,6 @@ $result = $conn -> query ($sql);
       <td><?php echo $row["name"] ?></td>
       <td><?php echo $row["address"] ?></td>
       <td><?php echo $row["phone"] ?></td>
-      <td><?php echo $row["mobnumber"] ?></td>
       <td><?php echo $row["txid"] ?></td>
       <td><?php echo $row["totalproduct"] ?></td>
       <td><?php echo $row["totalprice"] ?></td>
@@ -81,6 +79,5 @@ $result = $conn -> query ($sql);
         ?>
   </tbody>
 </table>
-<?php echo "Total= " . $t ." Taka";?>
 
 </div>

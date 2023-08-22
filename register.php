@@ -1,38 +1,31 @@
 <?php
 error_reporting(E_ALL);
-ini_set("display_errors",1);
+ini_set("display_errors", 1);
 include "lib/connection.php";
 $result = null;
-  if (isset($_POST['u_submit'])) 
-  {
-    $f_name=$_POST['u_name'];
-    $l_name=$_POST['l_name'];
-    $email=$_POST['email'];
-    $pass=md5($_POST['pass']);
-    $cpass=md5($_POST['c_pass']);
+if (isset($_POST['u_submit'])) {
+    $f_name = $_POST['u_name'];
+    $l_name = $_POST['l_name'];
+    $email = $_POST['email'];
+    $pass = md5($_POST['pass']);
+    $cpass = md5($_POST['c_pass']);
 
-    if ($pass==$cpass) 
-    {
-         $insertSql = "INSERT INTO users(f_name ,l_name, email, pass) VALUES ('$f_name', '$l_name','$email', '$pass')";
+    if ($pass == $cpass) {
+        $insertSql = "INSERT INTO users(f_name ,l_name, email, pass) VALUES ('$f_name', '$l_name','$email', '$pass')";
 
-         if ($conn -> query ($insertSql)) 
-         {
-            $result="Account Open success";
+        if ($conn->query($insertSql)) {
+            $result = "Account Open success";
             header("location:login.php");
-         }
-         else
-         {
-             die($conn -> error);
-         }
+        } else {
+            die($conn->error);
+        }
+    } else {
+        $result = "Password Not Match";
     }
-    else
-    {
-      $result="Password Not Match";
-    }
-  } 
+}
 
 
- //echo $result_std -> num_rows;
+//echo $result_std -> num_rows;
 
 
 ?>
@@ -94,7 +87,28 @@ $result = null;
                                             id="exampleRepeatPassword" placeholder="Repeat Password" name="c_pass">
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-user btn-block" name="u_submit">Register Account</button>
+
+
+
+                                <button type="submit" class="btn btn-primary btn-user btn-block shadow"
+                                    name="u_submit">Register Account</button>
+
+                                <div class="sec">
+                                    <a href="./oauth/oauth.php" class="btn shadow btn-block mt-4"
+                                        style="height: 40px;">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu1PJmT_THldF0n5APcmt9p10utgu6KSw4cH2fQ5Xhpw&s"
+                                                    alt="Google Logo" style="height: 20px; width: 20px;" />
+                                            </div>
+                                            <div class="col ">
+                                                Sign in with Google
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+
 
                                 <hr>
                                 <div class="text-center">
